@@ -1,0 +1,306 @@
+html {
+    background-color: #f4f6f8;
+}
+.kontejner {
+    width: 100%;
+    padding-top: 10px;
+}
+.separator{
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.separator label{
+    display: block;
+    width: 100%;
+}
+.separator .input-label, 
+.separator .checkbox-label,
+.separator input[type="text"] {
+    width: auto;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+}
+.separator .checkbox-label {
+    padding-left: 10px;
+}
+.separator input[type="checkbox"] {
+    width: auto;
+    flex: 0 0 70%;
+    max-width: 70%;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+}
+.separator input[type="checkbox"] {
+    padding-left: 15px;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+.kartica {
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+.leva-strana {
+    width: 100%;
+    max-width: 80%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.desna-strana {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    width: 100%;
+    max-width: 20%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.stan-header {
+    border-top: 1px solid #c5cdd5;
+}
+.stan-info-kontejner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+.stan-kontejner .kolona {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.stan-meseci-kontejner {
+    display: none;
+    position: relative;
+}
+.stan-meseci-kontejner.otvoreno{
+    display: block;
+    min-height: 39px;
+}
+.mesec-kontejner {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.mesec-kontejner:last-child {
+    padding-bottom: 20px;
+}
+.mesec-kontejner .kolona span {
+    position: relative;
+}
+.mesec-kontejner .kolona span.check-mark:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    border-left: 2px solid #f77821;
+    border-bottom: 2px solid #f77821;
+    height: 3px;
+    width: 8px;
+    -webkit-transform: rotate(-45deg) translateY(-50%);
+    -moz-transform: rotate(-45deg) translateY(-50%);
+    -o-transform: rotate(-45deg) translateY(-50%);
+    -ms-transform: rotate(-45deg) translateY(-50%);
+    transform: rotate(-45deg) translateY(-50%);
+}
+.mesec-kontejner .kolona span.false-mark:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #f77821;
+    top: 50%;
+    right: -18px;
+    height: 10px;
+    width: 2px;
+    -webkit-transform: rotate(-45deg) translateY(-50%);
+    -moz-transform: rotate(-45deg) translateY(-50%);
+    -o-transform: rotate(-45deg) translateY(-50%);
+    -ms-transform: rotate(-45deg) translateY(-50%);
+    transform: rotate(-45deg) translateY(-50%);
+}
+.mesec-kontejner .kolona span.false-mark:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #f77821;
+    top: 50%;
+    right: -11px;
+    height: 10px;
+    width: 2px;
+    -webkit-transform: rotate(45deg) translateY(-50%);
+    -moz-transform: rotate(45deg) translateY(-50%);
+    -o-transform: rotate(45deg) translateY(-50%);
+    -ms-transform: rotate(45deg) translateY(-50%);
+    transform: rotate(45deg) translateY(-50%);
+}
+input {
+    border: 1px solid #f77821;
+    border-radius: 3px;
+    padding: 5px 10px;
+    max-width: 100%;
+    outline: none;
+}
+input:focus,
+input:active,
+input:hover,
+button:focus,
+button:active,
+button:hover {
+    outline: none;
+}
+button {
+    padding: 10px 20px;
+    background-color: #f77821;
+    background: linear-gradient(0deg,#f77821 0,#f39231 100%);
+    border-radius: 3px;
+    border: 0 none;
+    color: #fff;
+    cursor: pointer;
+    -webkit-transition: opacity .25s;
+    -moz-transition: opacity .25s;
+    -o-transition: opacity .25s;
+    -ms-transition: opacity .25s;
+    transition: opacity .25s;
+    box-sizing: border-box;
+}
+.sakrij-btn button,
+.back button {
+    background: linear-gradient(to bottom,#fafafb 0,#ececec 100%);
+    color: #f77821;
+    border: 1px solid #c5cdd5;
+}
+.stan-kontejner .kolona button {
+    width: 90%;
+    margin: 0 auto;
+}
+button:hover {
+    opacity: .8;
+    box-sizing: border-box;
+}
+.sakrij {
+    display: none;
+}
+.stan-kontejner button.mali-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    width: auto;
+}
+.stan-kontejner button.mali-btn:last-child {
+    margin-left: 10px;
+}
+button.dodaj-mesec {
+    position: absolute;
+    bottom: 10px;
+    right: 26px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #f77821;
+    background-color: transparent;
+    background: transparent;
+    border: 0 none;
+    z-index: 5;
+}
+.obavestenje {
+    display: block;
+    padding: 15px;
+    background-color: #04aa6b;
+    color: #fff;
+    font-size: 16px;
+    max-width: 400px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-align: center;
+}
+.obavestenje.error {
+    background-color: #e93f31 ;
+}
+.obavestenje.sakrij {
+    display: none;
+}
+button.zatvori-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 15px;
+    display: block;
+    background: transparent;
+    color: #9fa9b2;
+    padding: 0;
+}
+.zatvori-btn svg {
+    width: 100%;
+    height: auto;
+    /* display: block; */
+}
+@media(max-width:1400px){
+    .leva-strana {
+        max-width: 100%;
+    }
+    .desna-strana {
+        background: rgba(0,0,0,.58);
+        z-index: 99999;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+    .desna-strana.sakrij{
+        display: none;
+    }
+}
+@media(max-width: 1300px ){
+    .mesec-kontejner .kolona {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-top: 10px;
+        box-sizing: border-box;
+    }
+    .mesec-kontejner .kolona:last-child {
+        flex: 0 0 100%;
+        max-width: 100%;
+        justify-content: flex-end;
+    }
+    .mesec-kontejner {
+        border-top: 1px solid #c5cdd5;
+    }
+}
+@media(max-width: 800px){
+    .stan-info-kontejner .kolona{
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        padding-bottom: 10px;
+    }
+}
+@media(max-width: 660px){
+    .stan-info-kontejner .kolona{
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-bottom: 10px;
+    }
+}
